@@ -4,13 +4,25 @@ import numpy
 import pandas as pd
 from datetime import datetime
 
+#Need to change
+num_samples = 8
+
 #NEED TO DO
 function_inputs = [4,-2,3.5,5,-11,-4.7]
 desired_output = 44
 
-#NEED TO DO
+def get_measurements():
+    sample_measurements = []
+    for i in range(num_samples):
+        curr_size = input("Please enter current size for sample " + i +":\n")
+        growth_rate = input("Please enter growth rate for sample " + i +":\n")
+        sample_measurements.append([curr_size, growth_rate])
+    return sample_measurements
+
 def fitness_func(ga_instance, solution, solution_idx):
-    return 1
+    global measurements
+    fitness = measurements[solution_idx][0] + measurements[solution_idx][1]
+    return fitness
 
 def main():
     files = os.listdir(os.curdir)
@@ -41,6 +53,8 @@ def main():
 
         mutation_type = "random"
         mutation_percent_genes = 10
+
+        #Also need to add way to use date from big data set if we want that
 
         ga_instance = pygad.GA(num_generations=num_generations,
                         num_parents_mating=num_parents_mating,
