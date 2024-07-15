@@ -14,8 +14,8 @@ desired_output = 44
 def get_measurements():
     sample_measurements = []
     for i in range(num_samples):
-        curr_size = input("Please enter current size for sample " + i +":\n")
-        growth_rate = input("Please enter growth rate for sample " + i +":\n")
+        curr_size = input("Please enter current size for sample " + str(i) +":\n")
+        growth_rate = input("Please enter growth rate for sample " + str(i) +":\n")
         sample_measurements.append([curr_size, growth_rate])
     return sample_measurements
 
@@ -35,6 +35,10 @@ def main():
 
     if not l:
         #NEED TO SET INITIAL SETUP VALUES
+        get_measurements()
+
+        function_inputs = [1,3,4,5]
+
         fitness_function = fitness_func
 
         num_generations = 50
