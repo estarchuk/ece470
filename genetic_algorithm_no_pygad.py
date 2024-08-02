@@ -5,10 +5,10 @@ import pandas as pd
 import random
 from datetime import datetime
 # tuples containing the types and dopants for the mushroom
-substrates = ("PDA","SPDA","YDA","MEA")
-nitri_source = ("Coffee Grounds","NH4CL","N2H8SO4","Nh2CONH2","1% peptone","1% malt extract","1% soybean powder","1% yeast extract")
+cultmed = ("PDA","SPDA","YDA","MEA")
+nitri_source = ("NH4CL","N2H8SO4","Nh2CONH2","1% peptone","1% malt extract","1% soybean powder","1% yeast extract")
 carb_source = ("glucose","dextrose","fructose","maltose","sucrose","molasses")
-cultmed = ("sugarcane residue","coconut shell fibre","corn cob","corn straw","acacia sawdust","wild grass","mixed sawddust","cow manure")
+substrates = ("sugarcane residue","coconut shell fibre","corn cob","corn straw","acacia sawdust","wild grass","mixed sawddust","cow manure")
 # geneset class type for mushroom condition
 first_sample = True
 old_gen = []
